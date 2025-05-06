@@ -5,6 +5,10 @@ import WhyChooseUs from '@/app/Components/Sections/WhyChooseUs'
 import WhyWeShine from '@/app/Components/Sections/WhyWeShine'
 import OurApproach from '@/app/Components/Sections/OurApproach'
 import Product from '@/app/Components/Sections/Product'
+import Pricing from '@/app/Components/Sections/Pricing'
+import Footer from '@/app/Components/Footer/Footer'
+
+
 const page = () => {
   return (
     <>
@@ -15,6 +19,8 @@ const page = () => {
     <WhyWeShine />
     <OurApproach />
     <Product />
+    <Pricing />
+    <Footer />
     
     
     </>
