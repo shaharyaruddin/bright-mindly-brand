@@ -1,4 +1,5 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 const WhyChooseUs = () => {
   return (
@@ -67,70 +68,62 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* New Section with Animated Cards */}
-        <div className="mt-12 py-6 bg-[#F5F8EB]">
-          <div className="flex justify-around flex-wrap gap-4 animate-marquee-left">
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Secure Transactions
-            </div>
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Dedicated Support
-            </div>
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Automatic Adjustments
-            </div>
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Real-Time Reports
-            </div>
+        <div className="mt-12 py-6 mb-6 bg-[#F5F8EB]">
+          <div className="flex gap-8 ">
+            <Marquee play direction="right" speed={100}>
+              <div className="flex  gap-6 justify-around">
+                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                  Secure Transactions
+                </div>
+                <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+                  Dedicated Support
+                </div>
+                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                  Automatic Adjustments
+                </div>
+                <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+                  Real-Time Reports
+                </div>
+
+                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                  Secure Transactions
+                </div>
+                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                  Real-Time Reports
+                </div>
+              </div>
+            </Marquee>
           </div>
-          <div className="flex justify-around flex-wrap gap-4 mt-4 animate-marquee-right">
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Smart Spending
+
+          <Marquee play speed={100}>
+            <div className="flex gap-6 justify-around mt-6 ">
+              <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+                Smart Spending
+              </div>
+              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                Customizable Plans
+              </div>
+              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                Instant Savings
+              </div>
+              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                Flexible Payments
+              </div>
+              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                Flexible Payments
+              </div>
+              <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+                Smart Spending
+              </div>
+              <div className=" rounded-full px-6 py-3 font-medium shadow-sm mx-6">
+                Customizable Plans
+              </div>
             </div>
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Customizable Plans
-            </div>
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Instant Savings
-            </div>
-            <div className="bg-white rounded-full px-6 py-3 text-gray-800 font-medium shadow-sm">
-              Flexible Payments
-            </div>
-          </div>
+          </Marquee>
         </div>
       </div>
     </div>
   );
 };
-
-// Animation styles
-const styles = `
-  @keyframes marquee-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  @keyframes marquee-right {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(50%); }
-  }
-  .animate-marquee-left {
-    animation: marquee-left 10s linear infinite;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .animate-marquee-right {
-    animation: marquee-right 10s linear infinite;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  @media (min-width: 640px) {
-    .animate-marquee-left:hover, .animate-marquee-right:hover {
-      animation-play-state: paused;
-    }
-  }
-`;
-
 
 export default WhyChooseUs;
