@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:justify-between items-center max-w-7xl mx-auto">
+      <div className="py-5 flex flex-col md:flex-row md:justify-between items-center max-w-7xl mx-auto">
         <div className="flex flex-col items-center md:items-start">
           {/* Logo */}
           <div className="flex items-center gap-2 mb-6">

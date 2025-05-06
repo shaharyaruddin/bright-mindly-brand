@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="mt-12 py-6 mb-6 bg-[#F5F8EB]">
+        <div className="mt-12 py-6 mb-6 bg-transparent">
           <div className="flex gap-8 ">
             <Marquee play direction="right" speed={100}>
               <div className="flex  gap-6 justify-around">

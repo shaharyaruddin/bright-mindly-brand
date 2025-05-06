@@ -7,7 +7,7 @@ import OurApproach from '@/app/Components/Sections/OurApproach'
 import Product from '@/app/Components/Sections/Product'
 import Pricing from '@/app/Components/Sections/Pricing'
 import Footer from '@/app/Components/Footer/Footer'
-
+import Business from '@/app/Components/Sections/Business'
 
 const page = () => {
   return (
@@ -20,6 +20,9 @@ const page = () => {
     <OurApproach />
     <Product />
     <Pricing />
+
+
+    <Business />
     <Footer />
     
     
