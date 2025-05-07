@@ -7,17 +7,16 @@ const Product = () => {
     <div className="bg-gradient-to-r from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Card 1 */}
-        <div className="order-1 ">
-          <span className="bg-green-100  text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded mr-2">
-            <svg
-              className="w-3 h-3 mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM1 10a9 9 0 1118 0 9 9 0 01-18 0z" />
-            </svg>
+        <div className="order-1">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/images/product.svg"
+              alt="product"
+              width={20}
+              height={20}
+            />
             Product
-          </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
             AI-Driven Savings
           </h2>
@@ -31,37 +30,36 @@ const Product = () => {
             Get Started
           </button>
         </div>
-        <div className="order-2 bg-[#FEFEFE] p-4 rounded-md">
-          <Image 
-            src="/assets/images/revenue.svg"
-            alt="Revenue"
-            width={600}
-            height={200}
-            className="w-full h-auto"
-          />
-        </div>
-
-        {/* Card 2 */}
-        <div className="order-4 md:order-3 bg-[#FEFEFE] p-4 rounded-md">
+        <div className="order-2 bg-[#FEFEFE] p-4 rounded-md flex justify-center items-center">
           <Image
             src="/assets/images/revenue.svg"
             alt="Revenue"
             width={600}
             height={200}
-            className="w-full h-auto"
+            className="w-full max-w-md h-auto"
+          />
+        </div>
+
+        {/* Card 2 */}
+        <div className="max-w-lg order-4 md:order-3 bg-[#FEFEFE] rounded-md flex justify-center items-center">
+          <Image
+            src="/assets/images/sales.svg"
+            alt="Sales"
+            width={200}
+            height={100}
+            className="w-full max-w-md h-auto"
           />
         </div>
         <div className="order-3">
-          <span className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded mr-2">
-            <svg
-              className="w-3 h-3 mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM1 10a9 9 0 1118 0 9 9 0 01-18 0z" />
-            </svg>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/images/product.svg"
+              alt="product"
+              width={20}
+              height={20}
+            />
             Product
-          </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
             Real-Time Insights
           </h2>
@@ -77,16 +75,15 @@ const Product = () => {
 
         {/* Card 3 */}
         <div className="order-5">
-          <span className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded mr-2">
-            <svg
-              className="w-3 h-3 mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM1 10a9 9 0 1118 0 9 9 0 01-18 0z" />
-            </svg>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/images/product.svg"
+              alt="product"
+              width={20}
+              height={20}
+            />
             Product
-          </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
             Customizable Plans
           </h2>
@@ -99,13 +96,13 @@ const Product = () => {
             Get Started
           </button>
         </div>
-        <div className="order-6 bg-[#FEFEFE] p-4 rounded-md">
+        <div className="order-6 bg-[#FEFEFE] p-4 rounded-md flex justify-center items-center">
           <Image
-            src="/assets/images/revenue.svg"
-            alt="Revenue"
+            src="/assets/images/sales-details.svg"
+            alt="Sales Details"
             width={600}
             height={200}
-            className="w-full h-auto"
+            className="w-full max-w-md h-auto"
           />
         </div>
       </div>

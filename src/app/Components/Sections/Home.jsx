@@ -1,19 +1,36 @@
 import Head from "next/head";
+import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 import { RxQuestionMarkCircled } from "react-icons/rx";
 
 export default function Home() {
   return (
-    <div className="flex flex-col px-3 items-center justify-center min-h-screen bg-gray-50">
+    <div className="flex flex-col px-3 items-center justify-center min-h-screen bg-gradient-to-r from-white via-[#F8FFE9] to-white">
       <Head>
         <title>GreenClover</title>
       </Head>
       <div className="text-center">
-        <div className="bg-[#F0FFD1] py-1.5 flex justify-center w-fit mx-auto px-4 mb-8 rounded-full">
+        <div className="bg-[#F0FFD1] py-1.5 flex justify-center w-fit mx-auto px-4 mb-8 rounded-full relative">
           <p className="text-[#1D1F13] font-medium   text-sm ">
             55,000+ trusted Businesses
           </p>
         </div>
+          <Image
+            src="/assets/images/dollar1.png"
+            alt="dollar"
+            width={170}
+            height={170}
+            className="absolute top-1/2 right-48 bg-transparent"
+          />
+
+<Image
+            src="/assets/images/user.png"
+            alt="user"
+            width={170}
+            height={170}
+            className="bg-transparent absolute bottom-24 left-48"
+          />
+
         <h1 className="max-w-5xl italic text-4xl lg:text-6xl font-semibold mb-4">
           Put More Cash Back in Your Business Pocket.
         </h1>

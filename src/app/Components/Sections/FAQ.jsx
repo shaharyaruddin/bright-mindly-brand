@@ -35,7 +35,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-gradient-to-t from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div className="bg-gradient-to-r from-[#F5FFE0] via-[#FAFFF1] to-[#FFFFFF   ] py-16  px-4 lg:px-32">
       <div className="flex justify-center max-w-7xl mx-auto">
         <div className="text-center">
         <div className="flex items-center justify-center">
@@ -55,20 +55,20 @@ const FAQ = () => {
           </p>
         </div>
       </div>
-      <div className="max-w-4xl bg-white p-10 rounded-xl mx-auto">
+      <div className="max-w-4xl bg-white p-4 md:p-10 mb-8 rounded-xl mx-auto">
         {faqs.map((faq, index) => (
           <div key={index} className="mb-4 bg-white shadoow-lg rounded-lg border border-gray-200">
             <div
               className="flex justify-between items-center p-4 cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
-              <h3 className=" font-[550] text-[#1D1F13]">{faq.question}</h3>
+              <h3 className=" font-medium text-[#1D1F13]">{faq.question}</h3>
               <span className="text-xl font-bold">
                 {expanded === index ? <IoClose /> : <IoMdAdd />                }
               </span>
             </div>
             {expanded === index && faq.answer && (
-              <div className="text-base max-w-2xl p-4 pt-0 text-[#1D1F13]">
+              <div className="text-sm max-w-2xl p-4 pt-0 text-[#1D1F13]">
                 {faq.answer}
               </div>
             )}
