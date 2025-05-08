@@ -9,6 +9,7 @@ import {
 import { RiShareForward2Line } from "react-icons/ri";
 import { CiCircleCheck } from "react-icons/ci";
 import { PiCrown } from "react-icons/pi";
+import Image from "next/image";
 
 const Pricing = () => {
   const plans = [
@@ -59,14 +60,30 @@ const Pricing = () => {
     },
   ];
 
-  const guarantees = [
-    { icon: <FaShieldAlt />, text: "100% Safe Purchase" },
-    { icon: <FaUndo />, text: "7-Day Money Back Guarantee" },
-    { icon: <FaShippingFast />, text: "Delivery In <24h" },
-  ];
 
   return (
-    <div className="bg-gradient-to-t from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div id="pricing" className="bg-gradient-to-b relative from-[#F4FFDF] to-white py-16 px-4 lg:px-32">
+    
+    {/* FOR RIGHT SIDE OF BG */}
+    
+     <Image
+                src="/assets/images/bg.svg"
+                alt="bg"
+                width={110}
+                height={110}
+                className="absolute z-10 top-4 right-[25rem] opacity-40"
+              />
+
+    {/* FOR BOTTOM SIDE OF BG */}
+
+<Image
+                src="/assets/images/bg.svg"
+                alt="bg"
+                width={110}
+                height={110}
+                className="absolute z-10 bottom-56 left-64 opacity-40"
+              />
+    
       <div className="flex justify-center max-w-7xl mx-auto">
         <div className="text-center">
           <p className="flex justify-center font-medium gap-2 mb-6">

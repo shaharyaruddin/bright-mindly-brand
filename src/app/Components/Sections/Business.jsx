@@ -1,10 +1,30 @@
+import Image from 'next/image';
 import React from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 
 const Business = () => {
   return (
-    <div className="bg-gradient-to-r from-[#FAFFEF] via-[#F3FFD9] to-[#FDFFF9] py-12 px-6 flex flex-col items-center justify-center text-center">
-      {/* Logo and Brand Name */}
+    <div className="bg-gradient-to-r relative from-[#FAFFEF] via-[#F3FFD9] to-[#FDFFF9] py-12 px-6 flex flex-col items-center justify-center text-center">
+
+ 
+     <Image
+                src="/assets/images/bg.svg"
+                alt="bg"
+                width={110}
+                height={110}
+                className="absolute z-10 top-12 left-16 opacity-40"
+              />
+    
+    <Image
+                src="/assets/images/bg3.svg"
+                alt="bg"
+                width={170}
+                height={170}
+                className="absolute z-10 bottom-4 right-1/4 opacity-40"
+              />
+    
+
+
       <div className="flex gap-2 items-center mb-4">
       <span className="text-green-600 text-3xl">☘</span>
 

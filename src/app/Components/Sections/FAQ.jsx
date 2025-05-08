@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import React, { useState } from "react";
 import { FaQuestion } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
@@ -35,7 +36,17 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#F5FFE0] via-[#FAFFF1] to-[#FFFFFF   ] py-16  px-4 lg:px-32">
+    <div className="bg-gradient-to-r from-[#F5FFE0] relative via-[#FAFFF1] to-[#FFFFFF   ] py-16  px-4 lg:px-32">
+     
+         
+          <Image
+                     src="/assets/images/bg.svg"
+                     alt="bg"
+                     width={110}
+                     height={110}
+                     className="absolute z-10 top-64 right-84 opacity-40"
+                   />
+     
       <div className="flex justify-center max-w-7xl mx-auto">
         <div className="text-center">
         <div className="flex items-center justify-center">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { HiBolt } from 'react-icons/hi2'
 
@@ -42,7 +43,7 @@ const steps = [
 
 const OurApproach = () => {
   return (
-    <div className="bg-gradient-to-t from-white via-[#FAFFF1] to-[#F4FFDF]   py-16 px-4 lg:px-32">
+    <div id='changelog' className="bg-gradient-to-r relative from-white via-[#FAFFF0] to-[#F3FFDB]   py-16 px-4 lg:px-32">
       <div className="max-w-7xl mx-auto">
         <div className="text-left">
           <p className="flex text-green-600 font-medium text-sm gap-2 mb-2">
@@ -55,6 +56,17 @@ const OurApproach = () => {
           <p className="text-gray-700 max-w-2xl mb-12">
             Our streamlined process ensures quick, efficient results, from setup to completion. Enjoy clear steps and full transparency at every stage.
           </p>
+
+{/* FOR RIGHT SIDE OF BG */}
+
+ <Image
+            src="/assets/images/bg.svg"
+            alt="bg"
+            width={110}
+            height={110}
+            className="absolute top-32 right-28 opacity-40"
+          />
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">

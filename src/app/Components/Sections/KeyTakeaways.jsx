@@ -1,6 +1,7 @@
 import React from "react";
 import { MdArrowOutward, MdInventory, MdSavings, MdAttachMoney, MdBarChart, MdAccountBalance, MdPieChart } from "react-icons/md";
 import './KeyTakeaways.css';
+import Image from "next/image";
 
 const takeaways = [
   {
@@ -31,7 +32,19 @@ const takeaways = [
 
 const KeyTakeaways = () => {
   return (
-    <div className="bg-gradient-to-r from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div className="bg-gradient-to-r relative from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    
+    
+    
+     <Image
+                src="/assets/images/bg.svg"
+                alt="bg"
+                width={110}
+                height={110}
+                className="absolute z-10 top-12 right-4 opacity-40"
+              />
+    
+    
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-48">
         {/* Card 1 */}
         <div className="max-w-xl">

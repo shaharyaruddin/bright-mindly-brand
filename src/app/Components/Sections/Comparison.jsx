@@ -1,4 +1,5 @@
 // components/Comparison.js
+import Image from "next/image";
 import React from "react";
 
 import { FaStackExchange } from "react-icons/fa";
@@ -16,7 +17,18 @@ const Comparison = () => {
       
 
   return (
-    <div className="bg-gradient-to-t from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div className="bg-gradient-to-b from-[#F4FFDF] to-white relative py-16 px-4 lg:px-32">
+     
+       {/* FOR RIGHT SIDE OF BG */}
+         
+          <Image
+                     src="/assets/images/bg.svg"
+                     alt="bg"
+                     width={110}
+                     height={110}
+                     className="absolute z-10 top-48 right-64 opacity-40"
+                   />
+     
       <div className="flex justify-center max-w-7xl mx-auto">
         <div className="text-center">
           <p className="flex justify-center font-medium gap-2 mb-6">

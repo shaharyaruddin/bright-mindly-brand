@@ -5,6 +5,7 @@ import { BiTransfer } from 'react-icons/bi'
 import { HiBolt } from 'react-icons/hi2'
 import { FaLock } from 'react-icons/fa'
 import { IoMdSettings } from 'react-icons/io'
+import Image from 'next/image'
 
 const features = [
   {
@@ -39,7 +40,7 @@ const features = [
 
 const WhyWeShine = () => {
   return (
-    <div className="bg-gradient-to-r from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div id='benefits' className="bg-gradient-to-r relative from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
       <div className=" ">
       <div>
         <p className="text-green-600 font-medium text-sm  gap-2 mb-2">
@@ -49,9 +50,23 @@ const WhyWeShine = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Why We Shine?
         </h2>
+
+
+
         <p className="text-gray-700 max-w-xl mb-12">
           Leverage the power of AI to automatically optimize your purchases, ensuring you get the best value for your business with every transaction.
         </p>
+
+{/* FOR RIGHT SIDE OF BG */}
+
+ <Image
+            src="/assets/images/bg.svg"
+            alt="bg"
+            width={110}
+            height={110}
+            className="absolute top-32 right-28 opacity-40"
+          />
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

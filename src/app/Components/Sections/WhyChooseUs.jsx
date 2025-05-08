@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-[#F5F8EB] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-[#F5FFDF] via-[#FBFFF2] to-[#FFFFFF] py-12 px-4 relative sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center mb-4">
           <span className="text-[#A8D163] text-2xl mr-2">★</span>
@@ -12,9 +13,30 @@ const WhyChooseUs = () => {
           </h2>
         </div>
 
-        <h1 className="text-xl lg:text-4xl font-medium text-gray-900 mb-4">
+        <h1 className="text-xl lg:text-4xl font-[550] text-gray-900 mb-4">
           Why Choose Us?
         </h1>
+
+{/* FOR RIGHT SIDE OF BG */}
+
+ <Image
+            src="/assets/images/bg.svg"
+            alt="bg"
+            width={110}
+            height={110}
+            className="absolute top-32 right-28 opacity-40"
+          />
+
+{/* FOR TOP LEFT SIDE OF BG */}
+
+          <Image
+            src="/assets/images/bg3.svg"
+            alt="bg"
+            width={110}
+            height={110}
+            className="absolute bottom-56 z-10 left-4 opacity-40"
+          /> 
+
         <p className="text-gray-600 text-base lg:text-base mb-8 max-w-xl">
           Leverage the power of AI to automatically optimize your purchases,
           ensuring you get the best value for your business with every
@@ -68,27 +90,27 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="mt-12 py-6 mb-6 bg-transparent">
+        <div className="mt-12 py-6 mb-6  ">
           <div className="flex gap-8 ">
             <Marquee play direction="right" speed={100}>
               <div className="flex  gap-6 justify-around">
-                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                <div className=" rounded-full px-6 py-3 border border-white bg-[#F7F8F5] font-medium ">
                   Secure Transactions
                 </div>
-                <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+                <div className=" rounded-full px-6 py-3 font-medium border border-white bg-[#F7F8F5] ">
                   Dedicated Support
                 </div>
-                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                <div className=" rounded-full px-6 py-3  font-medium border border-white bg-[#F7F8F5] ">
                   Automatic Adjustments
                 </div>
-                <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+                <div className=" rounded-full px-6 py-3 font-medium border border-white bg-[#F7F8F5]">
                   Real-Time Reports
                 </div>
 
-                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                <div className=" rounded-full px-6 py-3 border border-white bg-[#F7F8F5] font-medium ">
                   Secure Transactions
                 </div>
-                <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+                <div className=" rounded-full px-6 py-3 border border-white bg-[#F7F8F5] font-medium ">
                   Real-Time Reports
                 </div>
               </div>
@@ -97,31 +119,33 @@ const WhyChooseUs = () => {
 
           <Marquee play speed={100}>
             <div className="flex gap-6 justify-around mt-6 ">
-              <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+              <div className=" rounded-full px-6 py-3 border border-white bg-[#F7F8F5] font-medium ">
                 Smart Spending
               </div>
-              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+              <div className="border border-white bg-[#F7F8F5] rounded-full px-6 py-3  font-medium ">
                 Customizable Plans
               </div>
-              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+              <div className=" rounded-full px-6 py-3 border border-white bg-[#F7F8F5] font-medium ">
                 Instant Savings
               </div>
-              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+              <div className=" rounded-full px-6 py-3  font-medium border border-white bg-[#F7F8F5] ">
                 Flexible Payments
               </div>
-              <div className=" rounded-full px-6 py-3  font-medium shadow-sm">
+              <div className=" rounded-full px-6 py-3  font-medium border border-white bg-[#F7F8F5] ">
                 Flexible Payments
               </div>
-              <div className=" rounded-full px-6 py-3 font-medium shadow-sm">
+              <div className=" rounded-full px-6 py-3 font-medium border border-white bg-[#F7F8F5] ">
                 Smart Spending
               </div>
-              <div className=" rounded-full px-6 py-3 font-medium shadow-sm mx-6">
+              <div className=" rounded-full px-6 py-3 font-medium mx-6 border border-white bg-[#F7F8F5]">
                 Customizable Plans
               </div>
             </div>
           </Marquee>
         </div>
       </div>
+  
+      
     </div>
   );
 };

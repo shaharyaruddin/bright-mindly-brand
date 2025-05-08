@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Product = () => {
   return (
-    <div className="bg-gradient-to-r from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div id="product" className="bg-gradient-to-b relative from-[#F4FFDF] to-white py-16 px-4 lg:px-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Card 1 */}
         <div className="order-1">
@@ -25,6 +25,17 @@ const Product = () => {
             ensures you get the best possible value for your business,
             automatically.
           </p>
+
+{/* FOR RIGHT SIDE OF BG */}
+
+ <Image
+            src="/assets/images/bg.svg"
+            alt="bg"
+            width={110}
+            height={110}
+            className="absolute z-10 top-4 left-64 md:left-[30rem] opacity-40"
+          />
+
           <button className="bg-gradient-to-r from-gray-600 to-black flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
             Get Started
@@ -45,8 +56,8 @@ const Product = () => {
           <Image
             src="/assets/images/sales.svg"
             alt="Sales"
-            width={200}
-            height={100}
+            width={600}
+            height={200}
             className="w-full max-w-md h-auto"
           />
         </div>
