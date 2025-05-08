@@ -1,6 +1,34 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { HiBolt } from 'react-icons/hi2'
+import { motion } from "framer-motion";
+
+
+const headingText ="Our Approach".split(' ')
+const content = "Our streamlined process ensures quick, efficient results, from setup to completion. Enjoy clear steps and full transparency at every stage.".split(' ')
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+};
 
 const steps = [
   {
@@ -50,12 +78,38 @@ const OurApproach = () => {
             <HiBolt className="text-lg" />
             PROCESS
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Approach
-          </h2>
-          <p className="text-gray-700 max-w-2xl mb-12">
-            Our streamlined process ensures quick, efficient results, from setup to completion. Enjoy clear steps and full transparency at every stage.
-          </p>
+          <motion.h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+           variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {headingText.map((word, index) => (
+                      <motion.span
+                        key={index}
+                        variants={childVariants}
+                        className="inline-block mr-2"
+                      >
+                        {word}
+                      </motion.span>
+                    ))}
+          </motion.h2>
+          <motion.p className="text-gray-700 max-w-2xl mb-12"
+            variants={containerVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                    >
+                      {content.map((word, index) => (
+                        <motion.span
+                          key={index}
+                          variants={childVariants}
+                          className="inline-block mr-2"
+                        >
+                          {word}
+                        </motion.span>
+                      ))}
+                    </motion.p>
 
 {/* FOR RIGHT SIDE OF BG */}
 
@@ -69,7 +123,12 @@ const OurApproach = () => {
 
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.8 }}
+         viewport={{ once: true, amount: 0.2 }}
+       >
           {steps.map((step, index) => (
             <div
               key={index}
@@ -87,7 +146,7 @@ const OurApproach = () => {
               </ul>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-10">
+    <div className="fixed top-0 left-0 w-full z-50">
       <div className="flex justify-center py-4 sm:py-5">
         <div className="w-full max-w-5xl flex flex-col bg-white border border-[#F5F8EF] rounded-lg px-4 sm:px-6 py-3 sm:py-4 relative mx-4 sm:mx-6 lg:mx-auto">
           <div className="flex items-center justify-between w-full">

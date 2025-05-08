@@ -1,8 +1,10 @@
+'use client'
 import React from "react";
 import { IoPricetag } from "react-icons/io5";
 import { FaStar, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const clientImages = [
   '/assets/images/client1.png',
@@ -28,6 +30,58 @@ const reviewImages = [
 ];
 
 const Reviews = () => {
+  const headingText = "Our Valued Clients".split(" ");
+  const content =
+    "We're here to help you make the right decision. Explore our frequently asked questions and find answers below.".split(
+      " "
+    );
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariantsRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   const reviewData = [
     {
       quote: "A fantastic tool! It saved us time and money beyond expectations.",
@@ -109,20 +163,51 @@ const Reviews = () => {
             <IoPricetag className="text-xl text-[#A9ED42]" />
             REVIEWS
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Valued Clients
-          </h2>
-          <p className="text-gray-700 max-w-2xl mb-12">
-            We're here to help you make the right decision. Explore our
-            frequently asked questions and find answers below.
-          </p>
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {headingText.map((word, index) => (
+              <motion.span
+                key={index}
+                variants={childVariants}
+                className="inline-block mr-2"
+              >
+                {word}
+              </motion.span>
+            ))}
+          </motion.h2>
+          <motion.p
+            className="text-gray-700 max-w-2xl mb-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {content.map((word, index) => (
+              <motion.span
+                key={index}
+                variants={childVariants}
+                className="inline-block mr-2"
+              >
+                {word}
+              </motion.span>
+            ))}
+          </motion.p>
         </div>
       </div>
       <div className="max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
         {reviewData.map((review, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-white rounded-3xl shadow-md p-6 flex flex-col items-start mb-auto relative"
+            variants={index % 3 === 1 ? cardVariantsLeft : cardVariantsRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             <div className="flex gap-2 text-yellow-400 mb-4">
               <FaStar />
@@ -148,7 +233,7 @@ const Reviews = () => {
               </div>
             </div>
             <div className="absolute top-6 text-2xl right-6">{review.icon}</div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className="mt-12 flex text-sm font-medium justify-center">
@@ -160,7 +245,7 @@ const Reviews = () => {
             {clientImages.map((client, index) => (
               <div
                 key={index}
-                className="w-32 h-32 rounded-full overflow-hidden bg-white flex gap-12  items-center justify-center"
+                className="w-32 h-32 rounded-full overflow-hidden bg-white flex gap-12 items-center justify-center"
               >
                 <Image
                   src={client}
