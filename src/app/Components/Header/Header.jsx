@@ -1,6 +1,8 @@
-"use client";
+'use client'
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,74 +15,118 @@ const Header = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuOpen(false); // Close mobile menu after clicking
+  };
+
+  const navVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.1,
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const navItemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       <div className="flex justify-center py-4 sm:py-5">
-        <div className="w-full max-w-5xl flex flex-col bg-white border border-[#F5F8EF] rounded-lg px-4 sm:px-6 py-3 sm:py-4 relative mx-4 sm:mx-6 lg:mx-auto">
+        <div className="w-full max-w-5xl flex flex-col bg-white border border-[#E3F2FD] rounded-lg px-4 sm:px-6 py-3 sm:py-4 relative mx-4 sm:mx-6 lg:mx-auto shadow-md">
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
-            <div className="flex items-center gap-2 text-base sm:text-lg font-semibold">
-              <span className="text-green-600 text-xl">🍀</span>
-              Clover
-            </div>
+            <motion.div
+              className="flex items-center gap-2 text-base sm:text-lg font-semibold"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image
+                width={24}
+                height={24}
+                alt="logo"
+                src="/assets/images/book.svg"
+              />
+              BrightMindly
+            </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center justify-center flex-1">
+            <motion.div
+              className="hidden md:flex items-center justify-center flex-1"
+              variants={navVariants}
+              initial="hidden"
+              animate="visible"
+            >
               <nav className="flex justify-center items-center gap-2 lg:gap-8 text-sm font-medium">
-                <a
-                  href="#product"
-                  onClick={(e) => handleScroll(e, "#product")}
-                  className="hover:bg-gray-100 p-1.5 hover:px-3 rounded-full cursor-pointer"
+                <motion.a
+                  href="#home"
+                  onClick={(e) => handleScroll(e, "#home")}
+                  className="hover:bg-[#E1F5FE] p-1.5 hover:px-3 rounded-full cursor-pointer text-gray-700 hover:text-[#0288D1]"
+                  variants={navItemVariants}
                 >
-                  Product
-                </a>
-                <a
-                  href="#reviews"
-                  onClick={(e) => handleScroll(e, "#reviews")}
-                  className="hover:bg-gray-100 p-1.5 px-3 rounded-full cursor-pointer"
+                  Home
+                </motion.a>
+                <motion.a
+                  href="#comparison"
+                  onClick={(e) => handleScroll(e, "#comparison")}
+                  className="hover:bg-[#E1F5FE] p-1.5 px-3 rounded-full cursor-pointer text-gray-700 hover:text-[#0288D1]"
+                  variants={navItemVariants}
                 >
-                  Reviews
-                </a>
-                <a
-                  href="#benefits"
-                  onClick={(e) => handleScroll(e, "#benefits")}
-                  className="hover:bg-gray-100 p-1.5 px-3 rounded-full cursor-pointer"
+                  Comparison
+                </motion.a>
+                <motion.a
+                  href="#features"
+                  onClick={(e) => handleScroll(e, "#features")}
+                  className="hover:bg-[#E1F5FE] p-1.5 px-3 rounded-full cursor-pointer text-gray-700 hover:text-[#0288D1]"
+                  variants={navItemVariants}
                 >
-                  Benefits
-                </a>
-                <a
-                  href="#pricing"
-                  onClick={(e) => handleScroll(e, "#pricing")}
-                  className="hover:bg-gray-100 p-1.5 px-3 rounded-full cursor-pointer"
+                  Features
+                </motion.a>
+                <motion.a
+                  href="#testimonials"
+                  onClick={(e) => handleScroll(e, "#testimonials")}
+                  className="hover:bg-[#E1F5FE] p-1.5 px-3 rounded-full cursor-pointer text-gray-700 hover:text-[#0288D1]"
+                  variants={navItemVariants}
                 >
-                  Pricing
-                </a>
-                <a
-                  href="#changelog"
-                  onClick={(e) => handleScroll(e, "#changelog")}
-                  className="hover:bg-gray-100 p-1.5 px-3 rounded-full cursor-pointer"
+                  Testimonials
+                </motion.a>
+                <motion.a
+                  href="#faq"
+                  onClick={(e) => handleScroll(e, "#faq")}
+                  className="hover:bg-[#E1F5FE] p-1.5 px-3 rounded-full cursor-pointer text-gray-700 hover:text-[#0288D1]"
+                  variants={navItemVariants}
                 >
-                  Changelog
-                </a>
+                  FAQ
+                </motion.a>
               </nav>
-            </div>
+            </motion.div>
 
             {/* Desktop Button */}
-            <div className="hidden md:flex">
-              <button className="bg-black text-white px-3 py-3 sm:px-7 sm:py-3.5 rounded-lg flex items-center gap-2">
-                ✨ Get Clover
+            <motion.div
+              className="hidden md:flex"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <button className="cursor-pointer bg-[#0288D1] text-white px-3 py-3 sm:px-7 sm:py-3.5 rounded-lg flex items-center gap-2 hover:bg-[#01579B] transition-colors">
+                📘 Enroll Now
               </button>
-            </div>
+            </motion.div>
 
             {/* Mobile Menu Toggle */}
             <div className="md:hidden">
               <button onClick={toggleMenu}>
                 {menuOpen ? (
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6 text-gray-700" />
                 ) : (
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-6 h-6 text-gray-700" />
                 )}
               </button>
             </div>
@@ -88,48 +134,54 @@ const Header = () => {
 
           {/* Mobile Menu */}
           {menuOpen && (
-            <div className="absolute top-full mt-2 left-0 w-full bg-white border-t md:hidden z-50 rounded-b-lg">
+            <motion.div
+              className="absolute top-full mt-2 left-0 w-full bg-white border-t md:hidden z-50 rounded-b-lg shadow-lg"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
               <div className="flex flex-col items-start p-4 sm:p-5 gap-3 sm:gap-4 text-sm font-medium">
                 <a
-                  href="#product"
-                  onClick={(e) => handleScroll(e, "#product")}
-                  className="w-full"
+                  href="#home"
+                  onClick={(e) => handleScroll(e, "#home")}
+                  className="w-full text-gray-700 hover:text-[#0288D1]"
                 >
-                  Product
+                  Home
                 </a>
                 <a
-                  href="#reviews"
-                  onClick={(e) => handleScroll(e, "#reviews")}
-                  className="w-full"
+                  href="#comparison"
+                  onClick={(e) => handleScroll(e, "#comparison")}
+                  className="w-full text-gray-700 hover:text-[#0288D1]"
                 >
-                  Reviews
+                  Comparison
                 </a>
                 <a
-                  href="#benefits"
-                  onClick={(e) => handleScroll(e, "#benefits")}
-                  className="w-full"
+                  href="#features"
+                  onClick={(e) => handleScroll(e, "#features")}
+                  className="w-full text-gray-700 hover:text-[#0288D1]"
                 >
-                  Benefits
+                  Features
                 </a>
                 <a
-                  href="#pricing"
-                  onClick={(e) => handleScroll(e, "#pricing")}
-                  className="w-full"
+                  href="#testimonials"
+                  onClick={(e) => handleScroll(e, "#testimonials")}
+                  className="w-full text-gray-700 hover:text-[#0288D1]"
                 >
-                  Pricing
+                  Testimonials
                 </a>
                 <a
-                  href="#changelog"
-                  onClick={(e) => handleScroll(e, "#changelog")}
-                  className="w-full"
+                  href="#faq"
+                  onClick={(e) => handleScroll(e, "#faq")}
+                  className="w-full text-gray-700 hover:text-[#0288D1]"
                 >
-                  Changelog
+                  FAQ
                 </a>
-                <button className="w-full bg-black text-white px-4 py-2 rounded-md text-sm">
-                  ✨ Get Clover
+                <button className="w-full bg-[#0288D1] text-white px-4 py-2 rounded-md text-sm hover:bg-[#01579B] transition-colors">
+                  📘 Enroll Now
                 </button>
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>

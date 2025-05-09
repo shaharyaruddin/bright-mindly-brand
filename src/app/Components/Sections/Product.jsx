@@ -1,19 +1,19 @@
-"use client";
+'use client'
 import Image from "next/image";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
 
 const Product = () => {
-  const headingText1 = "AI-Driven Savings".split(" ");
+  const headingText1 = "AI-Powered Learning".split(" ");
   const content1 =
-    "Save more on every purchase with AI-powered optimization that ensures you get the best possible value for your business, automatically.".split(" ");
-  const headingText2 = "Real-Time Insights".split(" ");
+    "Enhance your education with AI-driven tools that personalize your learning experience, ensuring optimal progress and engagement.".split(" ");
+  const headingText2 = "Real-Time Progress Tracking".split(" ");
   const content2 =
-    "Track your spending with detailed analytics and real-time updates, giving you full transparency and control over every transaction.".split(" ");
-  const headingText3 = "Customizable Plans".split(" ");
+    "Monitor your learning journey with detailed analytics and instant updates, giving you full insight into your achievements and areas for growth.".split(" ");
+  const headingText3 = "Customizable Study Plans".split(" ");
   const content3 =
-    "Choose flexible plans designed to grow with your business, offering personalized options that adapt to meet your unique needs.".split(" ");
+    "Choose learning plans tailored to your goals, with flexible options that adapt to your schedule and aspirations.".split(" ");
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -64,7 +64,7 @@ const Product = () => {
   return (
     <div
       id="product"
-      className="bg-gradient-to-b relative from-[#F4FFDF] to-white py-16 px-4 lg:px-32"
+      className="bg-gradient-to-b relative from-[#E3F2FD] to-white py-16 px-4 lg:px-32"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Card 1 */}
@@ -81,8 +81,10 @@ const Product = () => {
               alt="product"
               width={20}
               height={20}
+              className="filter-blue"
+    
             />
-            Product
+            Feature
           </div>
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4"
@@ -118,21 +120,21 @@ const Product = () => {
               </motion.span>
             ))}
           </motion.p>
-          <button className="bg-gradient-to-r from-gray-600 to-black flex items-center gap-3 text-white px-5 py-3 rounded-md">
+          <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
-            Get Started
+            Enroll Now
           </button>
         </motion.div>
         <motion.div
-          className="order-2 bg-[#FEFEFE] p-4 rounded-md flex justify-center items-center"
+          className="order-2 bg-[#F5FAFE] p-4 rounded-md flex justify-center items-center"
           variants={cardVariantsRight}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <Image
-            src="/assets/images/revenue.svg"
-            alt="Revenue"
+            src="/assets/images/ai.jpeg"
+            alt="Learning"
             width={600}
             height={200}
             className="w-full max-w-md h-auto"
@@ -141,15 +143,15 @@ const Product = () => {
 
         {/* Card 2 */}
         <motion.div
-          className="max-w-lg order-4 md:order-3 bg-[#FEFEFE] rounded-md flex justify-center items-center"
+          className="max-w-lg order-4 md:order-3 bg-[#F5FAFE] rounded-md flex justify-center items-center"
           variants={cardVariantsLeft}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <Image
-            src="/assets/images/sales.svg"
-            alt="Sales"
+            src="/assets/images/progress.jpg"
+            alt="Progress"
             width={600}
             height={200}
             className="w-full max-w-md h-auto"
@@ -168,8 +170,9 @@ const Product = () => {
               alt="product"
               width={20}
               height={20}
+              className="filter-blue"
             />
-            Product
+            Feature
           </div>
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4"
@@ -205,9 +208,9 @@ const Product = () => {
               </motion.span>
             ))}
           </motion.p>
-          <button className="bg-gradient-to-r from-gray-600 to-black flex items-center gap-3 text-white px-5 py-3 rounded-md">
+          <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
-            Get Started
+            Enroll Now
           </button>
         </motion.div>
 
@@ -225,8 +228,10 @@ const Product = () => {
               alt="product"
               width={20}
               height={20}
+              className="filter-blue"
+
             />
-            Product
+            Feature
           </div>
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4"
@@ -262,21 +267,21 @@ const Product = () => {
               </motion.span>
             ))}
           </motion.p>
-          <button className="bg-gradient-to-r from-gray-600 to-black flex items-center gap-3 text-white px-5 py-3 rounded-md">
+          <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01559B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
-            Get Started
+            Enroll Now
           </button>
         </motion.div>
         <motion.div
-          className="order-6 bg-[#FEFEFE] p-4 rounded-md flex justify-center items-center"
+          className="order-6 bg-[#F5FAFE] p-4 rounded-md flex justify-center items-center"
           variants={cardVariantsRight}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <Image
-            src="/assets/images/sales-details.svg"
-            alt="Sales Details"
+            src="/assets/images/studyplan.png"
+            alt="Study Plan"
             width={600}
             height={200}
             className="w-full max-w-md h-auto"
@@ -287,10 +292,10 @@ const Product = () => {
       {/* FOR RIGHT SIDE OF BG */}
       <Image
         src="/assets/images/bg.svg"
-        alt="bg"
-        width={110}
-        height={110}
-        className="md:block hidden absolute z-10 top-4 left-64 md:left-[30rem] opacity-40"
+        alt="background pattern"
+        width={120}
+        height={120}
+        className="md:block hidden absolute z-10 top-4 left-64 md:left-[30rem] filter-blue opacity-30"
       />
     </div>
   );

@@ -5,9 +5,9 @@ import { MdArrowOutward } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
 const Business = () => {
-  const headingText = "Start Saving More and Streamlining Your Business Today.".split(" ");
+  const headingText = "Begin Your Learning Journey with Our Academy Today".split(" ");
   const content =
-    "Experience the power of automated savings and optimized spending. Get started now to boost your business efficiency and maximize returns.".split(
+    "Unlock your potential with tailored courses and expert guidance. Start now to elevate your skills and achieve your goals.".split(
       " "
     );
 
@@ -34,24 +34,24 @@ const Business = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r relative from-[#FAFFEF] via-[#F3FFD9] to-[#FDFFF9] py-12 px-6 flex flex-col items-center justify-center text-center">
+    <div className="bg-gradient-to-r relative from-[#E3F2FD] via-[#E1F5FE] to-[#F5FAFE] py-12 px-6 flex flex-col items-center justify-center text-center">
       <Image
         src="/assets/images/bg.svg"
-        alt="bg"
-        width={110}
-        height={110}
-        className="md:block hidden absolute z-10 top-12 left-16 opacity-40"
+        alt="background pattern"
+        width={120}
+        height={120}
+        className="md:block hidden absolute z-10 top-12 left-16 opacity-30 filter-blue"
       />
       <Image
-        src="/assets/images/bg3.svg"
-        alt="bg"
+        src="/assets/images/bg.svg"
+        alt="background pattern"
         width={170}
         height={170}
-        className="md:block hidden absolute z-10 bottom-4 right-1/4 opacity-40"
+        className="md:block hidden absolute z-10 bottom-4 right-1/4 opacity-30 filter-blue"
       />
       <div className="flex gap-2 items-center mb-4">
-        <span className="text-green-600 text-3xl">☘</span>
-        <h1 className="text-3xl font-bold text-gray-800">Clover</h1>
+        <span className="text-[#0288D1] text-3xl">📚</span>
+        <h1 className="text-3xl font-bold text-gray-800">LearnHub</h1>
       </div>
 
       {/* Heading */}
@@ -92,9 +92,9 @@ const Business = () => {
         ))}
       </motion.p>
 
-      <button className="bg-gradient-to-r from-gray-600 to-black flex items-center gap-3 text-white px-6 py-3 rounded-md">
+      <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-6 py-3 rounded-md">
         <MdArrowOutward />
-        Get Started
+        Enroll Now
       </button>
     </div>
   );

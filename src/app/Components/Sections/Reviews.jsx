@@ -30,9 +30,9 @@ const reviewImages = [
 ];
 
 const Reviews = () => {
-  const headingText = "Our Valued Clients".split(" ");
+  const headingText = "Our Esteemed Learners".split(" ");
   const content =
-    "We're here to help you make the right decision. Explore our frequently asked questions and find answers below.".split(
+    "Hear from our students and partners about how our academy has transformed their learning journey.".split(
       " "
     );
 
@@ -84,84 +84,84 @@ const Reviews = () => {
 
   const reviewData = [
     {
-      quote: "A fantastic tool! It saved us time and money beyond expectations.",
-      name: "Brendan",
-      title: "owner of Goog",
+      quote: "This academy transformed my career with its top-notch courses!",
+      name: "Sarah",
+      title: "Student at LearnHub",
       icon: <FaTwitter className="text-gray-500" />,
       image: reviewImages[0]
     },
     {
-      quote: "Simply exceptional! The platform is fast, efficient, and offers all the essential tools we need to optimize our processes effortlessly.",
-      name: "jacychan",
-      title: "owner of Breit",
+      quote: "The personalized learning paths made studying so effective and enjoyable!",
+      name: "Michael",
+      title: "Professional Learner",
       icon: <FaInstagram className="text-gray-500" />,
       image: reviewImages[1]
     },
     {
-      quote: "Great experience! The insights provided are incredibly helpful.",
-      name: "gaat",
-      title: "owner of Pidio",
+      quote: "The mentors are incredible, providing insights that truly matter.",
+      name: "Emily",
+      title: "Career Switcher",
       icon: <FaLinkedin className="text-gray-500" />,
       image: reviewImages[2]
     },
     {
-      quote: "An absolute must-have! The intuitive features, real-time insights, and seamless performance have greatly improved our operations.",
-      name: "Wilson",
-      title: "owner of Talik",
+      quote: "A fantastic platform! The resources are accessible and comprehensive.",
+      name: "David",
+      title: "Freelancer",
       icon: <FaFacebook className="text-gray-500" />,
       image: reviewImages[3]
     },
     {
-      quote: "An amazing platform! It streamlined our workflow and boosted productivity effortlessly.",
-      name: "jamesli",
-      title: "owner of Candto",
+      quote: "The courses are engaging and helped me gain recognized certifications!",
+      name: "Lisa",
+      title: "Aspiring Developer",
       icon: <FaTwitter className="text-gray-500" />,
       image: reviewImages[4]
     },
     {
-      quote: "A true game-changer! This platform offers powerful features, seamless integration, and user-friendly design that streamlines our workflow.",
-      name: "anna",
-      title: "owner of Hanko",
+      quote: "An exceptional learning experience with real-world applications.",
+      name: "James",
+      title: "Entrepreneur",
       icon: <FaInstagram className="text-gray-500" />,
       image: reviewImages[5]
     },
     {
-      quote: "Incredible tool! It helped us save time and resources while improving efficiency.",
-      name: "maya",
-      title: "owner of Janlo",
+      quote: "The support team is always there, making learning seamless.",
+      name: "Sophie",
+      title: "Part-Time Student",
       icon: <FaFacebook className="text-gray-500" />,
       image: reviewImages[6]
     },
     {
-      quote: "A true game-changer! This platform offers powerful features, seamless integration, and user-friendly design that streamlines our workflow.",
-      name: "janney",
-      title: "owner of Goyu",
+      quote: "This platform boosted my skills and confidence significantly!",
+      name: "Mark",
+      title: "Tech Enthusiast",
       icon: <FaFacebook className="text-gray-500" />,
       image: reviewImages[7]
     },
     {
-      quote: "Outstanding tool! It’s intuitive and highly effective.",
-      name: "shallot",
-      title: "owner of Tanko",
+      quote: "Highly recommend! The content is intuitive and practical.",
+      name: "Anna",
+      title: "Lifelong Learner",
       icon: <FaLinkedin className="text-gray-500" />,
       image: reviewImages[8]
     },
   ];
 
   return (
-    <div id="reviews" className="bg-gradient-to-t relative from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32">
+    <div id="testimonials" className="bg-gradient-to-t relative from-white via-[#E3F2FD] to-[#E1F5FE] py-16 px-4 lg:px-32">
       <Image
         src="/assets/images/bg.svg"
-        alt="bg"
-        width={110}
-        height={110}
-        className="absolute z-10 top-12 right-[20rem] opacity-40"
+        alt="background pattern"
+        width={120}
+        height={120}
+        className="lg:block hidden absolute z-10 top-12 right-52 lg:right-[20rem] opacity-30 filter-blue"
       />
       <div className="flex justify-center max-w-7xl mx-auto">
         <div className="text-center">
           <p className="flex justify-center font-medium gap-2 mb-6">
-            <IoPricetag className="text-xl text-[#A9ED42]" />
-            REVIEWS
+            <IoPricetag className="text-xl text-[#0288D1]" />
+            TESTIMONIALS
           </p>
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
@@ -223,7 +223,7 @@ const Reviews = () => {
                   src={review.image}
                   width={40}
                   height={40}
-                  alt={`${review.name}'s review`}
+                  alt={`${review.name}'s testimonial`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -237,7 +237,7 @@ const Reviews = () => {
         ))}
       </div>
       <div className="mt-12 flex text-sm font-medium justify-center">
-        <p>CLIENTS USING GREENCLOVER</p>
+        <p>PARTNERS & INSTITUTIONS</p>
       </div>
       <div className="mt-8">
         <Marquee play direction="right" speed={50}>
@@ -245,13 +245,13 @@ const Reviews = () => {
             {clientImages.map((client, index) => (
               <div
                 key={index}
-                className="w-32 h-32 rounded-full overflow-hidden bg-white flex gap-12 items-center justify-center"
+                className="w-32 h-32 rounded-full overflow-hidden flex gap-12 items-center justify-center"
               >
                 <Image
                   src={client}
                   width={115}
                   height={115}
-                  alt={`Client ${index + 1}`}
+                  alt={`Partner ${index + 1}`}
                   className="object-contain filter brightness-50"
                 />
               </div>

@@ -1,19 +1,17 @@
 "use client";
 import React from "react";
-import { FiDollarSign } from "react-icons/fi";
-import { MdInsights, MdOutlineSupportAgent } from "react-icons/md";
-import { BiTransfer } from "react-icons/bi";
-import { HiBolt } from "react-icons/hi2";
-import { FaLock } from "react-icons/fa";
+import { MdOutlineSupportAgent, MdInsights, MdLibraryBooks } from "react-icons/md";
+import { BiBrain } from "react-icons/bi";
+import { FaChalkboardTeacher, FaLock } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { HiBolt } from "react-icons/hi2";
 
-const headingText = "Why We Shine?".split(" ");
+const headingText = "Why Choose Our Platform?".split(" ");
 const content =
-  "Leverage the power of AI to automatically optimize your purchases, ensuring you get the best value for your business with every transaction.".split(
-    " "
-  );
+  "Empowering learners with the tools and guidance they need to succeed — anytime, anywhere. From expert support to smart learning features, we make education effective and engaging.".split(" ");
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -38,40 +36,40 @@ const childVariants = {
 
 const features = [
   {
-    icon: <FiDollarSign className="text-3xl text-black" />,
-    title: "Instant Savings",
+    icon: <MdLibraryBooks className="text-3xl text-blue-600" />,
+    title: "Rich Learning Resources",
     description:
-      "Get immediate savings on every purchase, powered by AI to optimize your transactions in real-time. No setup required, just seamless savings.",
+      "Access a wide range of curated study materials, lectures, and assignments tailored for academic success at every level.",
   },
   {
-    icon: <MdInsights className="text-3xl text-black" />,
-    title: "Real-Time Insights",
+    icon: <MdInsights className="text-3xl text-blue-600" />,
+    title: "Progress Tracking",
     description:
-      "Access detailed spending reports and intelligent insights to make smarter financial decisions. Stay informed with transparency at every step.",
+      "Monitor your growth with intelligent insights and progress reports designed to keep you motivated and on track.",
   },
   {
-    icon: <BiTransfer className="text-3xl text-black" />,
-    title: "Flexible Plans",
+    icon: <BiBrain className="text-3xl text-blue-600" />,
+    title: "Smart Learning",
     description:
-      "Choose customizable plans that adapt to your business’s unique needs, offering the flexibility to adjust as your requirements evolve.",
+      "AI-powered suggestions adapt to your performance and learning style, offering personalized study paths and practice.",
   },
   {
-    icon: <FaLock className="text-3xl text-black" />,
-    title: "Secure Transactions",
+    icon: <FaChalkboardTeacher className="text-3xl text-blue-600" />,
+    title: "Expert Mentorship",
     description:
-      "Every transaction is protected with the latest encryption technology, ensuring your business is always secure and your data safe.",
+      "Get help from experienced educators through live sessions, forums, and one-on-one mentorship tailored to your needs.",
   },
   {
-    icon: <IoMdSettings className="text-3xl text-black" />,
-    title: "Adaptive Features",
+    icon: <FaLock className="text-3xl text-blue-600" />,
+    title: "Safe & Secure",
     description:
-      "Enjoy automatic adjustments to your savings and plans, tailored to match your business’s spending patterns and goals.",
+      "We prioritize your privacy and safety with secure logins, encrypted data, and safe learning environments.",
   },
   {
-    icon: <MdOutlineSupportAgent className="text-3xl text-black" />,
-    title: "Dedicated Support",
+    icon: <MdOutlineSupportAgent className="text-3xl text-blue-600" />,
+    title: "24/7 Student Support",
     description:
-      "Access personalized assistance whenever you need it from our expert support team, helping you make the most of your benefits.",
+      "Have questions or need guidance? Our dedicated support team is here to help you anytime, day or night.",
   },
 ];
 
@@ -79,66 +77,63 @@ const WhyWeShine = () => {
   return (
     <div
       id="benefits"
-      className="bg-gradient-to-r relative from-white via-[#FAFFF1] to-[#F4FFDF] py-16 px-4 lg:px-32"
+      className="bg-gradient-to-r relative from-white via-[#F0F6FF] to-[#E6F0FF] py-16 px-4 lg:px-32"
     >
-      <div className=" ">
-        <div>
-          <p className="text-green-600 font-medium text-sm  gap-2 mb-2">
-            <HiBolt className="text-lg" />
-            BENEFITS
-          </p>
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {headingText.map((word, index) => (
-              <motion.span
-                key={index}
-                variants={childVariants}
-                className="inline-block mr-2"
-              >
-                {word}
-              </motion.span>
-            ))}
-          </motion.h2>
+      <div>
+        <p className="flex font-medium text-sm gap-2 mb-2">
+          <HiBolt className="text-lg text-blue-500" />
+          BENEFITS
+        </p>
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {headingText.map((word, index) => (
+            <motion.span
+              key={index}
+              variants={childVariants}
+              className="inline-block mr-2"
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.h2>
 
-          <motion.p
-            className="text-gray-700 max-w-xl mb-12"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {content.map((word, index) => (
-              <motion.span
-                key={index}
-                variants={childVariants}
-                className="inline-block mr-2"
-              >
-                {word}
-              </motion.span>
-            ))}
-          </motion.p>
+        <motion.p
+          className="text-gray-700 max-w-xl mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {content.map((word, index) => (
+            <motion.span
+              key={index}
+              variants={childVariants}
+              className="inline-block mr-2"
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.p>
 
-          {/* FOR RIGHT SIDE OF BG */}
+        <Image
+          src="/assets/images/bg.svg"
+          alt="education bg"
+          width={110}
+          height={110}
+          className="md:block hidden absolute top-32 right-28 opacity-40 filter-blue"
+        />
 
-          <Image
-            src="/assets/images/bg.svg"
-            alt="bg"
-            width={110}
-            height={110}
-            className="md:block hidden absolute top-32 right-28 opacity-40"
-          />
-        </div>
-
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        initial={{opacity: 0, y:50}}
-        whileInView={{opacity: 1, y:0}}
-        transition={{delay: 1, duration: 0.8}}
-        viewport={{once: true, amount: 0.2}}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           {features.map((item, index) => (
             <div
@@ -150,7 +145,7 @@ const WhyWeShine = () => {
                 {item.title}
               </h3>
               <p className="text-gray-600 text-base">{item.description}</p>
-              <div className="absolute top-4 right-4 bg-gray-200 rounded-full p-1.5 text-gray-400">
+              <div className="absolute top-4 right-4 bg-blue-100 rounded-full p-1.5 text-blue-400">
                 <HiBolt />
               </div>
             </div>
