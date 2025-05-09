@@ -130,7 +130,7 @@ const WhyWeShine = () => {
             alt="bg"
             width={110}
             height={110}
-            className="absolute top-32 right-28 opacity-40"
+            className="md:block hidden absolute top-32 right-28 opacity-40"
           />
         </div>
 

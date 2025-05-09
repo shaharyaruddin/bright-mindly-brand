@@ -60,23 +60,21 @@ const WhyChooseUs = () => {
           ))}
         </motion.h1>
 
-        {/* Background SVGs */}
         <Image
           src="/assets/images/bg.svg"
           alt="bg"
           width={110}
           height={110}
-          className="absolute top-32 right-28 opacity-40"
+          className="md:block hidden absolute top-32 right-28 opacity-40"
         />
         <Image
           src="/assets/images/bg3.svg"
           alt="bg"
           width={110}
           height={110}
-          className="absolute bottom-56 z-10 left-4 opacity-40"
+          className="md:block hidden absolute bottom-56 z-10 left-4 opacity-40"
         />
 
-        {/* Animated Paragraph */}
         <motion.p
           className="text-gray-600 text-base lg:text-base mb-8 max-w-xl"
           variants={containerVariants}
@@ -95,7 +93,6 @@ const WhyChooseUs = () => {
           ))}
         </motion.p>
 
-        {/* Animated Features */}
         <motion.div
           className="bg-white rounded-lg shadow-sm p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0, y: 50 }}

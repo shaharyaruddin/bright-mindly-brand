@@ -40,14 +40,14 @@ const Business = () => {
         alt="bg"
         width={110}
         height={110}
-        className="absolute z-10 top-12 left-16 opacity-40"
+        className="md:block hidden absolute z-10 top-12 left-16 opacity-40"
       />
       <Image
         src="/assets/images/bg3.svg"
         alt="bg"
         width={170}
         height={170}
-        className="absolute z-10 bottom-4 right-1/4 opacity-40"
+        className="md:block hidden absolute z-10 bottom-4 right-1/4 opacity-40"
       />
       <div className="flex gap-2 items-center mb-4">
         <span className="text-green-600 text-3xl">☘</span>

@@ -45,21 +45,22 @@ export default function Home() {
           </p>
         </motion.div>
         <Image
-          src="/assets/images/dollar.png"
-          alt="dollar"
-          width={200}
-          height={200}
-          className="absolute top-68 right-48"
-        />
+  src="/assets/images/dollar.png"
+  alt="dollar"
+  width={200}
+  height={200}
+  className="absolute bottom-3 lg:top-68 right-8 lg:right-48 w-36 h-36 md:w-[200px] md:h-[200px] "
+/>
+
         <Image
           src="/assets/images/user.png"
           alt="user"
           width={200}
           height={200}
-          className="bg-transparent absolute bottom-24 left-48"
+          className="lg:block hidden bg-transparent absolute bottom-24 left-48"
         />
         <motion.h1
-          className="max-w-5xl italic text-4xl lg:text-6xl font-[550] mb-4"
+          className="max-w-5xl italic text-3xl lg:text-6xl font-[550] mb-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

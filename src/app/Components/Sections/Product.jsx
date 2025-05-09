@@ -290,7 +290,7 @@ const Product = () => {
         alt="bg"
         width={110}
         height={110}
-        className="absolute z-10 top-4 left-64 md:left-[30rem] opacity-40"
+        className="md:block hidden absolute z-10 top-4 left-64 md:left-[30rem] opacity-40"
       />
     </div>
   );
