@@ -37,10 +37,10 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50">
+    <div className="sticky top-0 left-0 bg-gradient-to-r from-white via-[#E9F4FF] to-white w-full z-50">
       <div className="flex justify-center py-4 sm:py-5">
-        <div className="w-full max-w-5xl flex flex-col bg-white border border-[#E3F2FD] rounded-lg px-4 sm:px-6 py-3 sm:py-4 relative mx-4 sm:mx-6 lg:mx-auto shadow-md">
-          <div className="flex items-center justify-between w-full">
+        <div className="w-full lg:max-w-5xl flex flex-col bg-white border border-[#E3F2FD] rounded-lg px-4  py-3 sm:py-4 relative mx-4  lg:mx-auto shadow-md">
+          <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.div
               className="flex items-center gap-2 text-base sm:text-lg font-semibold"
@@ -53,6 +53,7 @@ const Header = () => {
                 height={24}
                 alt="logo"
                 src="/assets/images/book.svg"
+                className="filter-blue"
               />
               BrightMindly
             </motion.div>

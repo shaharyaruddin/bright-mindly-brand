@@ -47,7 +47,7 @@ const imageVariants = {
 
 export default function Home() {
   return (
-    <div id='home' className="flex flex-col px-3 items-center justify-center min-h-screen bg-gradient-to-r from-white relative via-[#E9F4FF] to-white">
+    <div id='home' className="flex flex-col px-3 items-center justify-center min-h-[33rem] bg-gradient-to-r from-white relative via-[#E9F4FF] to-white">
       <Head>
         <title>BrightMindly</title>
       </Head>

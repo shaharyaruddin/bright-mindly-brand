@@ -36,17 +36,6 @@ const Pricing = () => {
     },
   };
 
-  const cardVariantsRight = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
 
 
   const plans = [
@@ -111,7 +100,7 @@ const Pricing = () => {
         alt="bg"
         width={110}
         height={110}
-        className="absolute z-10 bottom-56 left-54 opacity-40"
+        className="absolute z-10 bottom-56 left-54 opacity-40 filter-blue"
       />
 
       <div className="flex justify-center max-w-7xl mx-auto">
