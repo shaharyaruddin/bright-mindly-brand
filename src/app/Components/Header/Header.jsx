@@ -116,7 +116,7 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <button className="cursor-pointer bg-[#0288D1] text-white px-3 py-3 sm:px-7 sm:py-3.5 rounded-lg flex items-center gap-2 hover:bg-[#01579B] transition-colors">
+              <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B]   text-white px-3 py-3 sm:px-7 sm:py-3.5 rounded-lg flex items-center gap-2 hover:bg-[#01579B] transition-colors">
                 📘 Enroll Now
               </button>
             </motion.div>
