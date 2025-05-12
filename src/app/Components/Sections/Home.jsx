@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { MdArrowOutward } from 'react-icons/md';
 import { RxQuestionMarkCircled } from 'react-icons/rx';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 // Extend Next.js Image component to support Framer Motion
 const MotionImage = motion(Image);
@@ -117,10 +118,12 @@ export default function Home() {
             <RxQuestionMarkCircled />
             Learn More
           </button>
+          <Link href='get-started'>
           <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
             Get Started
           </button>
+        </Link>
         </div>
       </div>
     </div>

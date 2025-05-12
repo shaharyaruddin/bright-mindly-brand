@@ -5,6 +5,7 @@ import './KeyTakeaways.css';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaCertificate } from "react-icons/fa";
+import Link from "next/link";
 
 const takeaways = [
   {
@@ -112,10 +113,13 @@ const KeyTakeaways = () => {
               </motion.span>
             ))}
           </motion.p>
+                <Link href='/Enroll-now'>
+
           <button className="bg-[#0288D1] flex cursor-pointer items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
             Enroll Now
           </button>
+          </Link>
         </div>
 
         {/* Card 2 */}

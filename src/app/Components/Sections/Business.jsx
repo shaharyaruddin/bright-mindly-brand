@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import { MdArrowOutward } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Business = () => {
   const headingText = "Begin Your Learning Journey with Our Academy Today".split(" ");
@@ -92,10 +93,13 @@ const Business = () => {
         ))}
       </motion.p>
 
+                <Link href='/Enroll-now'>
+
       <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-6 py-3 rounded-md">
         <MdArrowOutward />
         Enroll Now
       </button>
+      </Link>
     </div>
   );
 };

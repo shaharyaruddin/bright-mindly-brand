@@ -8,6 +8,7 @@ import { RiExchangeBoxLine } from "react-icons/ri";  // Changed icon
 import { PiTrophy } from "react-icons/pi";  // Changed icon
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 const Pricing = () => {
   const headingText = "Choose the Ideal Plan".split(" "); // Updated heading
@@ -176,10 +177,12 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
+            <Link href='get-started'>
             <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] justify-center w-full  flex gap-3 text-white px-5 py-3 rounded-md">
               <MdArrowForward /> {/* Updated icon */}
               Get Started 
             </button>
+            </Link>
             <p className="text-gray-500 italic text-center my-6">
               *No commitment – cancel anytime*
             </p>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Product = () => {
   const headingText1 = "AI-Powered Learning".split(" ");
@@ -120,10 +121,13 @@ const Product = () => {
               </motion.span>
             ))}
           </motion.p>
+                <Link href='/Enroll-now'>
+          
           <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
             Enroll Now
           </button>
+          </Link>
         </motion.div>
         <motion.div
           className="order-2 bg-[#F5FAFE] p-4 rounded-md flex justify-center items-center"
@@ -208,10 +212,13 @@ const Product = () => {
               </motion.span>
             ))}
           </motion.p>
+                <Link href='/Enroll-now'>
+          
           <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
             Enroll Now
           </button>
+          </Link>
         </motion.div>
 
         {/* Card 3 */}
@@ -267,10 +274,13 @@ const Product = () => {
               </motion.span>
             ))}
           </motion.p>
+                <Link href='/Enroll-now'>
+          
           <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01559B] flex items-center gap-3 text-white px-5 py-3 rounded-md">
             <MdArrowOutward />
             Enroll Now
           </button>
+          </Link>
         </motion.div>
         <motion.div
           className="order-6 bg-[#F5FAFE] p-4 rounded-md flex justify-center items-center"

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -116,9 +117,11 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
+              <Link href='/Enroll-now'>
               <button className="bg-gradient-to-r cursor-pointer from-[#0288D1] to-[#01579B]   text-white px-3 py-3 sm:px-7 sm:py-3.5 rounded-lg flex items-center gap-2 hover:bg-[#01579B] transition-colors">
                 📘 Enroll Now
               </button>
+              </Link>
             </motion.div>
 
             {/* Mobile Menu Toggle */}
@@ -178,9 +181,11 @@ const Header = () => {
                 >
                   FAQ
                 </a>
+                <Link href='/Enroll-now'>
                 <button className="w-full bg-[#0288D1] text-white px-4 py-2 rounded-md text-sm hover:bg-[#01579B] transition-colors">
                   📘 Enroll Now
                 </button>
+                </Link>
               </div>
             </motion.div>
           )}
