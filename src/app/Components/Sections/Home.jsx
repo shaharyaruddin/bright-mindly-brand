@@ -64,7 +64,7 @@ export default function Home() {
           alt="book"
           width={200}
           height={200}
-          className="absolute bottom-3 lg:top-68 right-8 lg:right-64 w-36 h-36 md:w-[200px] md:h-[200px]"
+          className="absolute -bottom-8  lg:top-68 right-8 lg:right-64 w-36 h-36 md:w-[200px] md:h-[200px]"
           variants={imageVariants}
           animate="animate"
         />
